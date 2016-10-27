@@ -1,6 +1,5 @@
-import json;
 from pprint import pprint;
-
+import json
 dictionary = {};
 
 with open('map.json') as mapFile:
@@ -25,7 +24,7 @@ def bfs(graph, start, end):
         node = path[-1]
         # path found
         if node == end:
-            return allPaths.append(path)
+            print(path);
             # allPaths.append(path)
         elif node not in visited:
             visited.append(node);
@@ -36,5 +35,3 @@ def bfs(graph, start, end):
                 queue.append(new_path)
 
 bfs(dictionary, word1.upper(), word2.upper());
-
-print(allPaths);
